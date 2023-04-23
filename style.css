@@ -1,0 +1,34 @@
+
+#header-container {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #center-container {
+    align-items: center;
+    background: #FFF;
+    height: 100vh;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+  }
+  #footer-container {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #midle-center-container{
+    margin: 0;
+    padding: 0;
+  }
+  
+#title-header{
+    background: #000;
+}
+a{
+    color: #FFF;
+}
