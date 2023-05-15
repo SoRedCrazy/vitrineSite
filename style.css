@@ -21,6 +21,9 @@
     margin: 0;
     padding: 0;
   }
+  #row-formulaire{
+    width: 60%;
+  }
   #midle-center-container{
     margin: 0;
     padding: 0;
@@ -31,4 +34,25 @@
 }
 a{
     color: #FFF;
+}
+
+
+html ,body{
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 640px){
+
+  #center-container {
+    align-items: center;
+    background: #FFF;
+    height: 175vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #row-formulaire{
+    width: 100%;
+  }
+
 }
