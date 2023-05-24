@@ -41,7 +41,7 @@ html ,body{
   margin: 0;
   padding: 0;
 }
-@media (max-width: 640px){
+@media screen and (orientation: portrait) {
 
   #center-container {
     align-items: center;
@@ -55,4 +55,32 @@ html ,body{
     width: 100%;
   }
 
+}
+
+@media screen and (orientation: landscape) {
+  #header-container {
+    background: #000;
+    height: 150vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #center-container {
+    align-items: center;
+    background: #FFF;
+    height: 175vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #row-formulaire{
+    width: 100%;
+  }
+  #footer-container {
+    background: #000;
+    height: 150vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
