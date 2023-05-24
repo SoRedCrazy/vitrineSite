@@ -13,8 +13,22 @@
 <body>
     <div id="header-container" class="ui grid middle aligned">
         <div class="row">
-          <div class="column">
+          <div class="column centered aligned" id="row-formulaire">
             <div id="title-header"class="ui segment center aligned inverted title-header">
+                <?php
+                if(isset($_GET['mail'])) {
+                  echo '<div  class="ui segment center aligned"> ';
+                  if($_GET['mail']=='true'){
+                    
+                    echo '<span class="ui success text">
+                    Mail envoyé</span>';
+                  }else{
+                    echo '<span class="ui red text">
+                    Mail non envoyé </span> ';
+                  }
+                  echo '</div>';
+                }
+                ?>
                 <img class="ui medium centered circular image" src="id.jpg">
                 <h1>Julien boisgard</h1>
                 <div>
@@ -165,6 +179,7 @@
             <div class="ui hidden section divider"></div>
             <div class="ui segment center aligned inverted">
                 <h1>Formulaire</h1>
+
                 <form class="ui form" action="mail.php" method="post">
                     <div class="field">
                         <p>Email</p>

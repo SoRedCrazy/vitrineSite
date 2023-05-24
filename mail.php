@@ -5,9 +5,9 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-require 'C:/xampp/htdocs/presentation/vendor/phpmailer/PHPMailer/src/Exception.php';
-require 'C:/xampp/htdocs/presentation/vendor/phpmailer/PHPMailer/src/PHPMailer.php';
-require 'C:/xampp/htdocs/presentation/vendor/phpmailer/PHPMailer/src/SMTP.php';
+require '/var/www/vitrineSite/phpmailer/PHPMailer/src/Exception.php';
+require '/var/www/vitrineSite/phpmailer/PHPMailer/src/PHPMailer.php';
+require '/var/www/vitrineSite/vendor/phpmailer/PHPMailer/src/SMTP.php';
 
 $sujet = ""; 
 $message = ""; 
@@ -23,7 +23,7 @@ if ( isset( $_POST['submit'] ) ) {
     $to = $_POST['email'];
     // afficher le résultat
  }else{
-    header("Location: https://jboisgard.fr/");
+    header("Location: index.php");
     die();
  }
 
@@ -52,10 +52,9 @@ function smtpmailer($to,$sujet,$message){
     $mail->AddAddress('contact@jboisgard.fr');
          
     if(!$mail->Send()){
-        echo 'E-mail non envoyé';
-        echo 'Mailer error:'.$mail->Errorinfo;
+        Header("Location: index.php?mail=false");
     }else{
-        echo 'Message envoyé';
+        Header("Location: index.php?mail=true");
     }
 } //fin fonction e-mail
  
